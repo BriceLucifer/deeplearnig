@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "code\\x64\\Debug\\cstdbool_JGT7S9AM11O073K4.obj",
+            "outputs": [
+                "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\vc143.pdb",
+                "code\\x64\\Debug\\cstdbool_JGT7S9AM11O073K4.module.json",
+                "code\\x64\\Debug\\cstdbool_JGT7S9AM11O073K4.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\cstdbool",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.42.34433\\include\\cstdbool",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\wzx\\desktop\\tudoulang\\code\\chunk.ixx",
+        "ProvidedModule": "Chunk",
+        "Includes": [],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": [
+            {
+                "Header": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.42.34433\\include\\cstdint",
+                "BMI": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\cstdint_1ZNHX23P4KESGUMA.ifc"
+            }
+        ]
+    }
+}

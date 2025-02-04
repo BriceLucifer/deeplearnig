@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7605038F-2E07-4A9D-BD2A-A458BCA9D737}|code.vcxproj|C:\\Users\\wzx\\Desktop\\tudoulang\\code\\chunk.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7605038F-2E07-4A9D-BD2A-A458BCA9D737}|code.vcxproj|solutionrelative:chunk.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7605038F-2E07-4A9D-BD2A-A458BCA9D737}|code.vcxproj|C:\\Users\\wzx\\Desktop\\tudoulang\\code\\Common.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7605038F-2E07-4A9D-BD2A-A458BCA9D737}|code.vcxproj|solutionrelative:Common.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7605038F-2E07-4A9D-BD2A-A458BCA9D737}|code.vcxproj|C:\\Users\\wzx\\Desktop\\tudoulang\\code\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7605038F-2E07-4A9D-BD2A-A458BCA9D737}|code.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Common.ixx",
+              "DocumentMoniker": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\Common.ixx",
+              "RelativeDocumentMoniker": "Common.ixx",
+              "ToolTip": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\Common.ixx",
+              "RelativeToolTip": "Common.ixx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-02-04T16:48:41.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Chunk.ixx",
+              "DocumentMoniker": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\Chunk.ixx",
+              "RelativeDocumentMoniker": "Chunk.ixx",
+              "ToolTip": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\Chunk.ixx",
+              "RelativeToolTip": "Chunk.ixx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-02-04T16:35:54.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-04T16:07:43.524Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

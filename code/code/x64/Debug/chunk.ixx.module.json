@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "code\\x64\\Debug\\Chunk.ixx.obj",
+            "outputs": [
+                "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\vc143.pdb",
+                "code\\x64\\Debug\\",
+                "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\Chunk.ixx.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "Chunk",
+                    "source-path": "c:\\users\\wzx\\desktop\\tudoulang\\code\\chunk.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "cstdint",
+                    "source-path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\cstdint",
+                    "lookup-method": "include-angle",
+                    "unique-on-source-path": true
+                }
+            ]
+        }
+    ]
+}

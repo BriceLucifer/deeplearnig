@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "code\\x64\\Debug\\iostream_7OV9P1XNQHSZYPX2.obj",
+            "outputs": [
+                "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\vc143.pdb",
+                "code\\x64\\Debug\\iostream_7OV9P1XNQHSZYPX2.module.json",
+                "code\\x64\\Debug\\iostream_7OV9P1XNQHSZYPX2.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\iostream",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.42.34433\\include\\iostream",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

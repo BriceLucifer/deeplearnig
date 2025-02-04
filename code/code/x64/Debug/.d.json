@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\wzx\\desktop\\tudoulang\\code\\main.cpp",
+        "ProvidedModule": "",
+        "Includes": [],
+        "ImportedModules": [
+            {
+                "Name": "Common",
+                "BMI": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\Common.ixx.ifc"
+            },
+            {
+                "Name": "Chunk",
+                "BMI": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\Chunk.ixx.ifc"
+            }
+        ],
+        "ImportedHeaderUnits": [
+            {
+                "Header": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.42.34433\\include\\cstdint",
+                "BMI": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\cstdint_1ZNHX23P4KESGUMA.ifc"
+            },
+            {
+                "Header": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.42.34433\\include\\cstdio",
+                "BMI": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\cstdio_CH4YHMJ8Z0ZDVBXW.ifc"
+            },
+            {
+                "Header": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.42.34433\\include\\cstdlib",
+                "BMI": "C:\\Users\\wzx\\Desktop\\tudoulang\\code\\code\\x64\\Debug\\cstdlib_LVN4JUVKGDYQIUF2.ifc"
+            }
+        ]
+    }
+}
