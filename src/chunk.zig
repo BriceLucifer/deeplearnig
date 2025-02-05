@@ -1,29 +1,25 @@
 const std = @import("std");
-const GROW_CAPACITY = @import("memory.zig").GROW_CAPACITY;
+const Allocator = std.mem.Allocator;
 
 pub const OpCode = enum(u8) {
     OP_RETURN,
 };
 
 pub const Chunk = struct {
+    code: std.ArrayList(u8),
     count: i32,
-    capacity: i32,
-    code: [*]u8,
 
-    pub fn initChunk(self: *Chunk) void {
+    pub fn initChunk(self: *Chunk, allocator: Allocator) void {
+        self.*.code = std.ArrayList(u8).init(allocator);
         self.*.count = 0;
-        self.*.capacity = 0;
-        self.*.code = null;
     }
 
-    pub fn writeChunk(self: *Chunk, byte: u8) void {
-        if (self.capacity < self.count + 1) {
-            const oldCapacity = self.*.capacity;
-            self.capacity = GROW_CAPACITY(oldCapacity);
-            // self.code = GROW_ARRAY();
-        }
-
-        self.*.code[self.*.count] = byte;
+    pub fn writeChunk(self: *Chunk, byte: u8) !void {
+        try self.code.append(byte);
         self.*.count += 1;
+    }
+
+    pub fn freeChunk(self: *Chunk) void {
+        self.*.code.deinit();
     }
 };

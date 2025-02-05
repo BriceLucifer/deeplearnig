@@ -1,10 +1,6 @@
 const std = @import("std");
-const testing = std.testing;
 
-pub fn add(a: i32, b: i32) i32 {
-    return a + b;
-}
-
-test "basic add functionality" {
-    try testing.expect(add(3, 7) == 10);
-}
+// files
+pub const chunk = @import("chunk.zig");
+pub const value = @import("value.zig");
+pub const debug = @import("debug.zig");
