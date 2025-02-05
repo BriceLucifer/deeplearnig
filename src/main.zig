@@ -10,7 +10,7 @@ pub fn main() !void {
 
     var chunk: Chunk = undefined;
     Chunk.initChunk(&chunk, gpa.allocator());
-    try chunk.writeChunk(@intFromEnum(OpCode.OP_RETURN));
+    try chunk.writeChunk(OpCode.OP_RETURN);
     debug.disassembleChunk(&chunk, "test chunk");
     defer chunk.freeChunk();
 }
