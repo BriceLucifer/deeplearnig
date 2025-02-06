@@ -19,6 +19,7 @@ pub fn main() !void {
         [_]f32{ 4.0, 5.0, 6.0 },
         [_]f32{ 7.0, 8.0, 9.0 },
     });
+    matrix_a.print();
 
     const matrix_b = math.Matrix(f32, 3, 3).init([3][3]f32{
         [_]f32{ 9.0, 8.0, 7.0 },
@@ -26,6 +27,21 @@ pub fn main() !void {
         [_]f32{ 3.0, 2.0, 1.0 },
     });
 
-    const result = matrix_a.dot(matrix_b).?;
+    var result = matrix_a.dot(matrix_b).?;
     result.print();
+
+    result = matrix_a.dot_SIMD(matrix_b).?;
+    result.print();
+
+    const vec_rows = matrix_a.Vector_Row();
+    for (vec_rows) |value| {
+        std.debug.print("date:{d} type:{s}\n", .{ value, @typeName(@TypeOf(value)) });
+    }
+
+    std.debug.print("==========\n", .{});
+
+    const vec_cols = matrix_b.Vector_Col();
+    for (vec_cols) |col| {
+        std.debug.print("date:{d} type:{s}\n", .{ col, @typeName(@TypeOf(col)) });
+    }
 }

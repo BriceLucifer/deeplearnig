@@ -38,6 +38,44 @@ pub fn Matrix(comptime T: type, comptime Rows: usize, comptime Cols: usize) type
             };
         }
 
+        pub fn dot_SIMD(self: *const @This(), other: @This()) ?@This() {
+            const col_len_self = if (self.Array.len > 0) self.Array[0].len else 0;
+            const row_len_other = other.Array.len;
+
+            if (col_len_self != row_len_other) {
+                return null; // 不满足矩阵乘法规则
+            }
+
+            // 获取矩阵的行向量和列向量
+            const vec_rows = self.Vector_Row();
+            const vec_cols = other.Vector_Col();
+
+            // 结果矩阵的维度
+            const result_rows = self.Array.len;
+            const result_cols = other.Array[0].len;
+
+            // 初始化结果矩阵
+            var result: [result_rows][result_cols]T = undefined;
+
+            // 使用 SIMD 进行矩阵乘法
+            for (0..result_rows) |i| {
+                for (0..result_cols) |j| {
+                    // 获取第 i 行和第 j 列的向量
+                    const row = vec_rows[i];
+                    const col = vec_cols[j];
+
+                    // 计算点积
+                    const sum = @reduce(.Add, row * col);
+
+                    result[i][j] = sum;
+                }
+            }
+
+            return @This(){
+                .Array = result,
+            };
+        }
+
         // 打印矩阵
         pub fn print(self: *const @This()) void {
             const GREEN_START = "\x1b[32m";
@@ -45,13 +83,44 @@ pub fn Matrix(comptime T: type, comptime Rows: usize, comptime Cols: usize) type
 
             std.debug.print(GREEN_START ++ "[\n", .{});
             for (self.Array) |row| {
-                std.debug.print(GREEN_START ++ "\t[ ", .{});
+                std.debug.print(GREEN_START ++ "  [ ", .{});
                 for (row) |value| {
                     std.debug.print("{d} ", .{value});
                 }
-                std.debug.print(GREEN_START ++ "\t]\n", .{});
+                std.debug.print(GREEN_START ++ "]\n", .{});
             }
             std.debug.print(GREEN_START ++ "]" ++ RESET ++ "\n", .{});
+        }
+
+        // 向量化
+        pub fn Vector_Row(self: *const @This()) [Rows]@Vector(Rows, T) {
+            var vec_rows: [Rows]@Vector(Cols, T) = undefined;
+            for (0..Rows) |num| {
+                vec_rows[num] = self.*.Array[num];
+            }
+            return vec_rows;
+        }
+
+        pub fn Vector_Col(self: *const @This()) [Cols]@Vector(Cols, T) {
+            var array_col: [Cols][Rows]T = undefined;
+            // var vec_cols = [Cols]@Vector(Rows, T);
+            for (0..Rows) |row| {
+                for (0..Cols) |col| {
+                    // [
+                    //          cols
+                    //   rows  [1,2,3]
+                    //         [1,2,3]
+                    //         [1,2,3]
+                    // ]
+                    array_col[col][row] = self.*.Array[row][col];
+                }
+            }
+
+            var vec_cols: [Cols]@Vector(Rows, T) = undefined;
+            for (0..Cols) |num| {
+                vec_cols[num] = array_col[num];
+            }
+            return vec_cols;
         }
     };
 }
