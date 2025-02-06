@@ -158,17 +158,17 @@ pub fn XOR(x: @Vector(2, f32)) f32 {
     return AND(@Vector(2, f32){ s1, s2 });
 }
 
-pub fn Sigmoid(x: @Vector(2, f32)) @Vector(2, f32) {
-    const ones = @Vector(2, f32){ 1.0, 1.0 };
+pub fn Sigmoid(comptime len: usize, x: @Vector(len, f32)) @Vector(len, f32) {
+    const ones: @Vector(len, f32) = @splat(1.0);
     return ones / (ones + std.math.exp(-x));
 }
 
-pub fn Step(x: @Vector(2, f32)) @Vector(2, bool) {
-    const zeros = @Vector(2, f32){ 0.0, 0.0 };
+pub fn Step(comptime len: usize, x: @Vector(len, f32)) @Vector(len, bool) {
+    const zeros: @Vector(len, f32) = @splat(0.0);
     return x > zeros;
 }
 
-pub fn ReLU(x: @Vector(2, f32)) @Vector(2, f32) {
-    const zeros = @Vector(2, f32){ 0.0, 0.0 };
+pub fn ReLU(comptime len: usize, x: @Vector(len, f32)) @Vector(len, f32) {
+    const zeros: @Vector(2, f32) = @splat(0.0);
     return @select(f32, x > zeros, x, zeros);
 }
