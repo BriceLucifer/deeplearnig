@@ -169,6 +169,6 @@ pub fn Step(comptime len: usize, x: @Vector(len, f32)) @Vector(len, bool) {
 }
 
 pub fn ReLU(comptime len: usize, x: @Vector(len, f32)) @Vector(len, f32) {
-    const zeros: @Vector(2, f32) = @splat(0.0);
+    const zeros: @Vector(len, f32) = @splat(0.0);
     return @select(f32, x > zeros, x, zeros);
 }
